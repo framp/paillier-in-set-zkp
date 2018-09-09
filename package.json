@@ -1,0 +1,31 @@
+{
+  "name": "paillier-in-set-zkp",
+  "version": "0.9.0",
+  "description": "Generate a zero knowledge proof that an encrypted number is in a set",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "sed -i '/\\/\\/ TEST/d' index.js",
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/framp/paillier-in-set-zkp.git"
+  },
+  "keywords": [
+    "zero knowledge",
+    "proof",
+    "zkp",
+    "paillier",
+    "cryptosystem"
+  ],
+  "author": "Federico Rampazzo <frampone@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/framp/paillier-js-in-set-zkp/issues"
+  },
+  "homepage": "https://github.com/framp/paillier-js-in-set-zkp#readme",
+  "dependencies": {
+    "big-integer": "^1.6.36",
+    "paillier-js": "^0.9.2"
+  }
+}
