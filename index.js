@@ -105,17 +105,6 @@ const verifyProof = (publicKey, cipher, [as, es, zs], validMessages) => {
   })
 }
 
-const leftPad = (str, length) =>
-  [...Array(Math.max(0, length-str.length))].map(_ => '0').join('') + str
-
-const toNumber = (str, bits=16) => 
-  bigInt(str
-    .split('')
-    .map(char => char.charCodeAt(0))
-    .filter(code => !isNaN(code) && code > 0 && code < 2**bits)
-    .map(code => leftPad(code.toString(2), bits))
-    .reduce((acc, code) => acc + code, ''), 2)
-
 module.exports = {
   encryptWithProof,
   verifyProof,
